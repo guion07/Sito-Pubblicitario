@@ -83,16 +83,17 @@
         </div>
 
         <div class="profile-section mt-auto p-4">
-            <div class="d-flex align-items-center">
-                <div id="profilePic" class="profile-pic-placeholder">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="ms-3 profile-info">
-                    <h6 id="usernameDisplay" class="text-white mb-0">Ospite</h6>
-                    <small id="accessoStatus" class="text-muted">Accesso non eseguito</small>
-                </div>
-            </div>
-        </div>
+          <div class="d-flex align-items-center mb-3">
+              <div id="profilePic" class="profile-pic-placeholder">
+                  <i class="fas fa-user"></i>
+              </div>
+              <div class="ms-3 profile-info">
+                  <h6 id="usernameDisplay" class="text-white mb-0">Ospite</h6>
+                  <small id="accessoStatus" class="text-muted">Accesso non eseguito</small>
+              </div>
+          </div>
+          <button id="logoutBtn" class="btn btn-sm btn-outline-light w-100" style="display: none;">Logout</button>
+      </div>
     </nav>
     
   
@@ -164,16 +165,26 @@
 </div>
 
 <script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const username = document.getElementById('usernameInput').value;
-        document.getElementById('usernameDisplay').textContent = username;
-        document.getElementById('accessoStatus').textContent = "Accesso eseguito";
-        const profilePic = document.getElementById('profilePic');
-        profilePic.outerHTML = `<img src="/Profilo.png" style="height:60px" class="rounded-circle" alt="Profile">`;
-        const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-        loginModal.hide();
-    });
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('usernameInput').value;
+      document.getElementById('usernameDisplay').textContent = username;
+      document.getElementById('accessoStatus').textContent = "Accesso eseguito";
+      const profilePic = document.getElementById('profilePic');
+      profilePic.outerHTML = `<img id="profilePic" src="/Profilo.png" style="height:60px" class="rounded-circle" alt="Profile">`;
+      document.getElementById('logoutBtn').style.display = 'block';
+      bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', function () {
+      document.getElementById('usernameDisplay').textContent = "Ospite";
+      document.getElementById('accessoStatus').textContent = "Accesso non eseguito";
+      document.getElementById('profilePic').outerHTML = `
+          <div id="profilePic" class="profile-pic-placeholder">
+              <i class="fas fa-user"></i>
+          </div>`;
+      this.style.display = 'none';
+  });
 </script>
 
 </body>
