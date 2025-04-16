@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" sizes="96x96" href="/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giochi | PlayStation®5</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main-content {
+            margin-left: 250px;
+            padding-top: 80px;
+        }
+
+        .login-button-wrapper {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .profile-pic-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-button-wrapper">
+    <button class="btn btn-warning text-white fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal">
+        Accedi
+    </button>
+</div>
+
+<div class="d-flex">
+    <nav class="sidebar d-flex flex-column flex-shrink-0 position-fixed bg-dark text-white" style="width: 250px; height: 100vh;">
+        <div class="p-4">
+            <h4 class="logo-text fw-bold mb-0">PlayStation®5</h4>
+        </div>
+
+        <div class="nav flex-column">
+            <a href="Index.html" class="sidebar-link text-decoration-none p-3 text-white">
+                <img src="/Logo.png" alt="" width="27" height="20">
+                <span class="hide-on-collapse">Home</span>
+            </a>
+            <a href="Giochi.html" class="sidebar-link active text-decoration-none p-3 text-white">
+                <img src="/Giochi.png" alt="" width="34" height="27">
+                <span class="hide-on-collapse">Giochi</span>
+            </a>
+            <a href="Accessori.html" class="sidebar-link text-decoration-none p-3 text-white">
+                <img src="/Accessori.png" alt="" width="27" height="20">
+                <span class="hide-on-collapse">Accessori</span>
+            </a>
+            <a href="Carrello.html" class="sidebar-link text-decoration-none p-3 text-white">
+                <img src="/Carrello.png" alt="" width="27" height="20">
+                <span class="hide-on-collapse">Carrello</span>
+            </a>
+        </div>
+
+        <div class="profile-section mt-auto p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div id="profilePic" class="profile-pic-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="ms-3 profile-info">
+                    <h6 id="usernameDisplay" class="text-white mb-0">Ospite</h6>
+                    <small id="accessoStatus" class="text-muted">Accesso non eseguito</small>
+                </div>
+            </div>
+            <button id="logoutBtn" class="btn btn-sm btn-outline-light w-100" style="display: none;">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-content">
+        <h2 class="fw-bold text-center mb-4">Giochi per PlayStation®5</h2>
+        <p class="text-center text-muted">Questa sezione è dedicata ai titoli disponibili per la console PS5.</p>
+    </div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="loginModalLabel">Accedi al tuo account Sony</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="usernameInput" class="form-label">Nome utente</label>
+              <input type="text" class="form-control bg-secondary text-white border-0" id="usernameInput" placeholder="Inserisci il tuo nome utente" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Accedi</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const username = document.getElementById('usernameInput').value;
+        document.getElementById('usernameDisplay').textContent = username;
+        document.getElementById('accessoStatus').textContent = "Accesso eseguito";
+        const profilePic = document.getElementById('profilePic');
+        profilePic.outerHTML = `<img id="profilePic" src="/Profilo.png" style="height:60px" class="rounded-circle" alt="Profile">`;
+        document.getElementById('logoutBtn').style.display = 'block';
+        bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', function () {
+        document.getElementById('usernameDisplay').textContent = "Ospite";
+        document.getElementById('accessoStatus').textContent = "Accesso non eseguito";
+        document.getElementById('profilePic').outerHTML = `
+            <div id="profilePic" class="profile-pic-placeholder">
+                <i class="fas fa-user"></i>
+            </div>`;
+        this.style.display = 'none';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</body>
+</html>
