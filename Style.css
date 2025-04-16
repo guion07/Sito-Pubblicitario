@@ -153,14 +153,20 @@ main {
 .carousel-control-next {
     filter: invert(0);
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b517466e075081f05113d2003b1591c886ca37ae
 .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b517466e075081f05113d2003b1591c886ca37ae
 .container .row {
     display: flex;
     flex-wrap: wrap;
@@ -168,19 +174,26 @@ main {
     gap: 20px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b517466e075081f05113d2003b1591c886ca37ae
 .container .row .col {
     flex: 1 1 calc(33.33% - 20px);
     margin-bottom: 20px;
     max-width: calc(33.33% - 20px);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b517466e075081f05113d2003b1591c886ca37ae
 .container .row .col:nth-child(4),
 .container .row .col:nth-child(5) {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
 }
+<<<<<<< HEAD
 
 
 @media (max-width: 768px) {
@@ -202,3 +215,5 @@ main {
         width: 200px;
     }
 }
+=======
+>>>>>>> b517466e075081f05113d2003b1591c886ca37ae
