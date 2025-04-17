@@ -259,39 +259,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Gestione del login
+
     document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Evita il comportamento predefinito (rinfrescare la pagina)
+        e.preventDefault();
         
-        // Prendi il nome utente
+
         const username = document.getElementById('usernameInput').value;
         
-        // Imposta il nome utente visualizzato nel profilo
+
         document.getElementById('usernameDisplay').textContent = username;
         
-        // Modifica lo stato di accesso
+
         document.getElementById('accessoStatus').textContent = "Accesso eseguito";
         
-        // Cambia l'icona del profilo (se l'utente è loggato, metti un'icona diversa)
+
         document.getElementById('profilePic').outerHTML = `<img id="profilePic" src="/Profilo.png" style="height:60px" class="rounded-circle" alt="Profile">`;
 
-        // Mostra il bottone di logout
+
         document.getElementById('logoutBtn').style.display = 'block';
 
-        // Nascondi il modal di login
+
         bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
     });
 
-    // Gestione del logout
+
     document.getElementById('logoutBtn').addEventListener('click', function () {
-        // Ripristina il nome utente e lo stato di accesso
+
         document.getElementById('usernameDisplay').textContent = "Ospite";
         document.getElementById('accessoStatus').textContent = "Accesso non eseguito";
         
-        // Ripristina l'icona del profilo predefinita
+
         document.getElementById('profilePic').outerHTML = `<div id="profilePic" class="profile-pic-placeholder"><i class="fas fa-user"></i></div>`;
 
-        // Nascondi il bottone di logout
         document.getElementById('logoutBtn').style.display = 'none';
     });
 </script>
