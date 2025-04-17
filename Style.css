@@ -215,3 +215,87 @@ main {
         width: 200px;
     }
 }
+.carousel-item p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+.carousel-image {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  #gameCaption {
+    font-size: 1rem;
+    color: #ccc;
+    padding: 0 10px;
+  }
+  #gameCaption {
+    padding-bottom: 20px;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  .page-title {
+    position: relative;
+    z-index: 2;
+    margin-top: -50px;
+    padding: 20px;
+    background-color: #183560;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  .title-outside {
+    position: relative;
+    top: -50px;
+    z-index: 10;
+    text-align: center;
+    color: #000000;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+  }
+  .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.container .row .col {
+    flex: 1 1 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    max-width: calc(33.33% - 20px);
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .container .row .col {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .row .col {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-left: 10px;
+    }
+}
