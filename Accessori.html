@@ -69,22 +69,22 @@
         .panel.active {
             flex: 5;
         }
+
         .accessory-section {
-    margin-left: 250px;
-    padding: 40px 20px;
-}
+            margin-left: 250px;
+            padding: 40px 20px;
+        }
 
-.card-grid {
-    max-width: 100%;
-    margin: 0 auto;
-}
-.card-body, .card-title, .card-text, .card .h5 {
-    color: #212529;
-}
-.card .h5 {
-    color: #212529;
-}
-
+        .card-grid {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .card-body, .card-title, .card-text, .card .h5 {
+            color: #212529;
+        }
+        .card .h5 {
+            color: #212529;
+        }
     </style>
 </head>
 <body class="bg-dark text-white">
@@ -113,10 +113,6 @@
             <a href="Accessori.html" class="sidebar-link text-decoration-none p-3 text-white">
                 <img src="/Accessori.png" alt="" width="40" height="30">
                 <span class="hide-on-collapse">Accessori</span>
-            </a>
-            <a href="Carrello.html" class="sidebar-link text-decoration-none p-3 text-white">
-                <img src="/Carrello.png" alt="" width="40" height="30">
-                <span class="hide-on-collapse">Carrello</span>
             </a>
         </div>
 
@@ -184,8 +180,9 @@
 
         <div class="col-md-9 offset-md-3 col-lg-10 offset-lg-2">
             <h2 class="fw-bold bg-dark text-white text-center mt-5 py-2">Maggiori informazioni</h2>
-             <p class="text-center text-muted">Scopri i migliori accessori per migliorare la tua esperienza di gioco.</p>
+            <p class="text-center text-muted">Scopri i migliori accessori per migliorare la tua esperienza di gioco.</p>
             <div class="row justify-content-center g-4 mt-4">
+                
                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                     <div class="card h-100 shadow-sm" style="max-width: 320px;">
                         <img src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-image-block-01-en-21mar23?$1600px$" class="card-img-top" alt="Product 1">
@@ -194,12 +191,12 @@
                             <p class="card-text">Un controller intuitivo che offre un feedback aptico avanzato per un gameplay immersivo.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">$74.99</span>
-                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi</button>
+                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi al carrello</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                     <div class="card h-100 shadow-sm" style="max-width: 320px;">
                         <img src="https://gmedia.playstation.com/is/image/SIEPDC/PULSE-Elite-headset-thumbnail-02-en-12sep23?$1600px--t$" class="card-img-top" alt="Product 2">
@@ -208,12 +205,12 @@
                             <p class="card-text">Cuffie wireless di ultima generazione con audio 3D e microfono con cancellazione del rumore.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">$149.99</span>
-                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi</button>
+                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i>Aggiungi al carrello</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                     <div class="card h-100 shadow-sm" style="max-width: 320px;">
                         <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-console-cover-galactic-purple-screenshot-01-en-25aug23?$1600px--t$" alt="Product 3">
@@ -222,7 +219,7 @@
                             <p class="card-text">Personalizza la tua PS5 con coperture intercambiabili in vari colori e finiture uniche.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">$64.99</span>
-                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi</button>
+                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi al carrello</button>
                             </div>
                         </div>
                     </div>
@@ -236,7 +233,7 @@
                             <p class="card-text">Volante da corsa con force feedback per una vera esperienza da pilota.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">$999.99</span>
-                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi</button>
+                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi al carrello</button>
                             </div>
                         </div>
                     </div>
@@ -249,8 +246,13 @@
                             <p class="card-text">PlayStation Portal per lo streaming remoto dei tuoi giochi PS5 preferiti ovunque.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">$219.99</span>
-                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Aggiungi</button>
+                                <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i>Aggiungi al carrello</button>
                             </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
             </div>
         </div>
     </div>
@@ -259,38 +261,29 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach(panel => {
+        panel.addEventListener('click', function() {
+            panels.forEach(p => p.classList.remove('active'));
+            panel.classList.add('active');
+        });
+    });
 
     document.getElementById('loginForm').addEventListener('submit', function (e) {
         e.preventDefault();
-        
-
         const username = document.getElementById('usernameInput').value;
-        
-
         document.getElementById('usernameDisplay').textContent = username;
-        
-
         document.getElementById('accessoStatus').textContent = "Accesso eseguito";
-        
-
         document.getElementById('profilePic').outerHTML = `<img id="profilePic" src="/Profilo.png" style="height:60px" class="rounded-circle" alt="Profile">`;
-
-
         document.getElementById('logoutBtn').style.display = 'block';
-
-
         bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
     });
 
-
     document.getElementById('logoutBtn').addEventListener('click', function () {
-
         document.getElementById('usernameDisplay').textContent = "Ospite";
         document.getElementById('accessoStatus').textContent = "Accesso non eseguito";
-        
-
         document.getElementById('profilePic').outerHTML = `<div id="profilePic" class="profile-pic-placeholder"><i class="fas fa-user"></i></div>`;
-
         document.getElementById('logoutBtn').style.display = 'none';
     });
 </script>
